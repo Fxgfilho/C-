@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i = 10;
+    cout << "Looping DO-WHILE" << endl;
+    do
+    {
+        i++;
+        cout << "O valor da variavel i eh: " << i << endl;
+    }while(i>=10 && i<=20);
+
+    int n = 10;
+    cout << "Looping WHILE" << endl;
+    while(n>=10 && n<=20)
+    {
+        n++;
+        cout << "O valor da variavel n eh: " << n << endl;
+    }
+
+
+    system("pause");
+    return 0;
+
+}
