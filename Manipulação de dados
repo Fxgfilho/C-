@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Informe um numero: " << endl;
+
+    int n = 0;
+    cin >> n;
+
+    cout << "O numero digitado eh: " << n << endl;
+
+    system("pause");
+    return 0;
+}
