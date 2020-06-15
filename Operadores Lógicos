@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+// o uso de ||, significa OU
+
+int main()
+{
+    cout << "Digite um numero no intervalo de 45 a 72" << endl;
+    int i;
+    cin >> i;
+
+    if(i >= 45 && i <= 72)
+    {
+        cout << "O numero pertence ao intervalo" << endl;
+    }
+    else
+    {
+        cout << "O numero nao pertence ao intervalo" << endl;
+    }
+
+    system("pause");
+    return 0;
+}
