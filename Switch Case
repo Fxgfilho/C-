@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double n = 0;
+    double m = 0;
+    char a;
+    cout << "Digite um numero: " << endl;
+    cin >> n;
+
+    cout << "Digite outro numero: " << endl;
+    cin >> m;
+
+    cout << "Digite a operacao que deseja fazer: " << endl;
+    cin >> a;
+
+    switch(a)
+    {
+    case '+':
+        cout << "A soma eh: " << n+m << endl;
+        break;
+    case '-':
+        cout << "A diferenca eh: " << n-m << endl;
+        break;
+    case '*':
+        cout << "O produto eh: " << n*m << endl;
+        break;
+    case '/':
+        cout << "A divisao eh: " << n/m << endl;
+        break;
+    default:
+        cout << "ERRO" << endl;
+    }
+
+    system("pause");
+    return 0;
+}
