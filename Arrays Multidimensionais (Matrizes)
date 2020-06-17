@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int ordem = 3;
+    int n[ordem][ordem];
+    int i, j;
+    for(i=0; i<ordem; i++)
+    {
+        for(j=0; j<ordem; j++)
+        {
+            cin >> n[i][j];
+        }
+    }
+
+     for(i=0; i<ordem; i++)
+    {
+        for(j=0; j<ordem; j++)
+        {
+            string end = (j<ordem-1) ? ", " : "\n";
+            cout << n[i][j] << end;
+        }
+    }
+
+
+    system("pause");
+    return 0;
+}
