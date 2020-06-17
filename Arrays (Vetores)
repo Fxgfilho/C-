@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i = 0;
+    int n[10];
+    for(i=0; i<10; i++)
+    {
+        cin >> n[i];
+    }
+
+    for(i=0; i<10; i++)
+    {
+        cout << n[i] << endl;
+    }
+
+
+    system("pause");
+    return 0;
+}
