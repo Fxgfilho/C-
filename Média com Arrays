@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double n[5];
+    int i;
+    double soma = 0;
+    double media;
+    for(i=0; i<5; i++)
+    {
+        cin >> n[i];
+    }
+    for(i=0; i<5; i++)
+    {
+        soma = soma + n[i];
+    }
+    media = soma/5;
+    cout << std::fixed;
+
+    cout << "A media eh: " << media << endl;
+
+    system("pause");
+    return 0;
+}
