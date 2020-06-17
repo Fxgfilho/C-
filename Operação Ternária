@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Digite um numero: " << endl;
+    int i = 0;
+    cin >> i;
+
+    string texto = (i<=10) ? "Menor que dez" : "Maior que dez";
+
+    cout << "O valor digitado eh: " << texto << endl;
+
+    return 0;
+    system("pause");
+}
