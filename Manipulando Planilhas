@@ -1,0 +1,50 @@
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+
+int main()
+{
+    //1) criar uma planilha com valores aleatorios
+    //2) soma dos valores de cada linha
+    //3) soma da soma dos valores de cada linha
+
+    double plan[5][6] = {};
+
+    // Contruindo a planilha
+
+    for(int x=0; x<5; x++)
+    {
+        for(int y=0; y<5; y++)
+        {
+            plan[x][y] = (double)rand() + (RAND_MAX / 100);
+        }
+    }
+
+    // Cálculo dos valores
+    double total = 0;
+    for(int x=0; x<5; x++)
+    {
+        for(int y=0; y<5; y++)
+        {
+            plan[x][5] += plan[x][y];
+        }
+        total += plan[x][5];
+    }
+
+    // Imprimindo a planilha
+
+    for(int x=0; x<5; x++)
+    {
+        for(int y=0; y<6; y++)
+        {
+            string end = (y<4) ? ", " :
+                         (y<5) ? " = " : "\n";
+            cout << plan[x][y] << end;
+        }
+    }
+
+    cout << "O valor da soma eh: " << total << endl;
+    system("pause");
+    return 0;
+}
