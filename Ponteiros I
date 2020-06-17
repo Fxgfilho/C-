@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // & --> operador de ponteiro
+
+    string veiculo = "Carro";
+    string *pv;
+
+    pv=&veiculo; //Ponteiro pv recebe o endere�o da vari�vel veiculo
+
+    cout << pv << endl;
+
+    *pv="Moto"; //No endere�o apontado por ponteiro pv, adc o valor "Moto"
+
+    cout << veiculo << endl;
+
+    system("pause");
+    return 0;
+}
