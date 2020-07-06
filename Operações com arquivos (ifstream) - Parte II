@@ -1,0 +1,36 @@
+#include <iostream>
+#include <fstream>
+
+// ifstream--> Sai do arquivo e vai para o programa
+
+using namespace std;
+
+int main()
+{
+    ofstream arquivoS;
+
+    arquivoS.open("fabio.txt", ios::app); // Criação do arquivo txt; ios::app--> Adiciona mais textos no arquivo
+    arquivoS << "Programar em C++\n"; // Armazena esse texto no arquivo txt
+    arquivoS.close();
+
+
+    ifstream arquivoE;
+    string linha;
+
+    arquivoE.open("fabio.txt");
+    if(arquivoE.is_open())      // Leitura do arquivo
+    {
+        while(getline(arquivoE, linha))
+        {
+            cout << linha << endl;
+        }
+        arquivoE.close();
+    }
+    else
+    {
+        cout << "Nao foi possivel abrir o arquivo" << endl;
+    }
+
+    system("pause");
+    return 0;
+}
