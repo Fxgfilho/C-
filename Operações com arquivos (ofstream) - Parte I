@@ -1,0 +1,20 @@
+#include <iostream>
+#include <fstream>
+
+// ofstresm--> Sai do programa e vai para o arquivo
+
+using namespace std;
+
+int main()
+{
+    ofstream arquivo;
+
+    arquivo.open("fabio.txt", ios::app); // Criação do arquivo txt; ios::app--> Adiciona mais textos no arquivo
+
+    arquivo << "Programar em C++\n"; // Armazena esse texto no arquivo txt
+
+    arquivo.close();
+
+    system("pause");
+    return 0;
+}
