@@ -1,0 +1,46 @@
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+
+// fstream--> Tem tanto a função de ofstream como a de ifstream
+
+using namespace std;
+
+int main()
+{
+    fstream arquivo;
+    string nome;
+    string linha;
+    char opc='s';
+
+    arquivo.open("Fabio.txt", ios::out|ios::app);
+
+    while((opc=='s') or (opc=='S'))
+    {
+        cout << "Digite um nome: " << endl;
+        cin >> nome;
+        arquivo << nome << "\n";
+        cout << "\nDigitar um novo nome?[s/n]";
+        cin >> opc;
+        system("CLS");
+    }
+    arquivo.close();
+
+    arquivo.open("Fabio.txt", ios::in);
+    cout << "Nomes digitados" << endl;
+
+    if(arquivo.is_open())
+    {
+        while(getline(arquivo, linha))
+        {
+            cout << linha << endl;
+        }
+    }
+    else
+    {
+        cout << "Nao foi possivel abrir o arquivo" << endl;
+    }
+
+    system("pause");
+    return 0;
+}
