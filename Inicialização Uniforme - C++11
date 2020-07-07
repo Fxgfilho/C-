@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+#include <map>
+
+using namespace std;
+
+struct Pessoa
+{
+    string nome;
+    int idade;
+};
+
+class Veiculo
+{
+public:
+    int tipo;
+    string nome;
+};
+
+int main()
+{
+
+    int num{10}; // num=10;
+    string nome{"Fabio"}; // nome=Fabio;
+    vector<int>valores{1,2,3,4,5};
+    map<string,string>capitais{{"MG", "Belo Horizonte"}};
+
+    Pessoa p1{"Fabio", 18};
+
+    Veiculo v1{1, "Carango"};
+
+    cout << v1.tipo << " - " << v1.nome << endl;
+
+    system("pause");
+    return 0;
+}
