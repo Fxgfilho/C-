@@ -1,0 +1,36 @@
+#include <iostream>
+#include <stdexcept>
+
+double divide(double n1, double n2)
+{
+    if(n2==0)
+    {
+        throw "Erro de divisao por ZERO";
+    }
+    if(n1>=10)
+    {
+        throw "N1 precisa ser menor do que 10";
+    }
+    return n1/n2;
+}
+
+using namespace std;
+
+int main()
+{
+    double a,b;
+    cin >> a >> b;
+
+    try
+    {
+        cout << divide(a, b) << endl;
+    }
+    catch(const char* e)
+    {
+        cout << "ERRO:" << e << endl;
+    }
+
+
+    system("pause");
+    return 0;
+}
