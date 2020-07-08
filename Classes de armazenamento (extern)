@@ -1,0 +1,35 @@
+/* AUXILIAR */
+
+#include <iostream>
+
+using namespace std;
+
+extern int num; // num é externo a esse arquivo, por isso que declara como extern
+int valor=10;
+
+void impNum()
+{
+    cout << num << endl;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* CODIGO */
+
+#include <iostream>
+
+using namespace std;
+
+void impNum();
+
+int num{20};
+extern int valor;
+
+int main()
+{
+    impNum();
+    cout << valor << endl;
+
+    system("pause");
+    return 0;
+}
