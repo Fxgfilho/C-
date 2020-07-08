@@ -1,0 +1,35 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+// auto é próprio do C++11
+
+void somador()
+{
+    static auto i=0; // Armaxena a variável na mesma posição da memória, logo usa ela mesmo
+    i++;
+    cout << i << endl;
+}
+
+int main()
+{
+    auto num=10; // O tipo é definido na inicialização
+    register int cont; // Armazenar em um registrador, um acesso mais rápido. Mas apenas se possível
+
+    vector<int>v{10,20,30,40,50,60,70};
+
+    somador();
+    somador();
+    somador();
+
+    cout << "\n";
+
+    for(register auto it=v.begin(); it!=v.end(); it++)
+    {
+        cout << *it << endl;
+    }
+
+    system("pause");
+    return 0;
+}
